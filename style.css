@@ -10,7 +10,6 @@ div.wrapper {
   margin: 0 auto;
   display: flex;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
   background: white;
 }
 
@@ -19,29 +18,51 @@ aside {
   padding: 40px 30px;
   background: rgb(6, 20, 221);
   color: white;
-  border-radius: 20px 0 0 20px;
 }
 
-aside h2 {
-  text-align: center;
-}
 aside > img {
   display: block;
   border: 6px solid #030375;
   border-radius: 50%;
   margin: 0 auto;
 }
+aside h2 {
+  text-align: center;
+}
+aside h3 {
+  margin-left: 8px;
+}
 
-aside div h3 {
+aside div.hobbies > i {
+  margin-left: 13%;
+}
+aside div.language {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+aside div.qr img {
+  display: block;
+  margin: 22px auto 0 auto;
+}
+aside div.contact div,
+aside div.social-media div,
+aside div.hobbies div,
+aside div.qr div,
+aside div.language-title {
+  display: flex;
   background: #030375;
   height: 30px;
+  margin: 8px auto;
   padding: 10px;
   border-radius: 20px;
+  align-items: center;
 }
 
 aside ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 aside ul li {
   margin: 8px;
@@ -57,8 +78,6 @@ aside ul li a:hover {
 .language img {
   width: 50px;
   height: 40px;
-}
-.language h5 {
 }
 
 .content {
@@ -136,7 +155,6 @@ a.skills-btn:focus {
     padding: 40px 5px;
   }
   .content {
-    justify-content: center;
     padding: 40px 15px;
   }
   a.experience-btn,
@@ -152,10 +170,16 @@ a.skills-btn:focus {
   .content {
     background: white;
     border: 0;
-    border-radius: initial;
   }
   aside {
     padding: 40px 20px;
-    border-radius: initial;
+  }
+}
+@media print {
+  body {
+  }
+  aside {
+    background: rgb(6, 20, 221) !important;
+    color: white;
   }
 }
