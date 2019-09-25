@@ -1,0 +1,161 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f6e6;
+}
+
+div.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  background: white;
+}
+
+aside {
+  margin: 0;
+  padding: 40px 30px;
+  background: rgb(6, 20, 221);
+  color: white;
+  border-radius: 20px 0 0 20px;
+}
+
+aside h2 {
+  text-align: center;
+}
+aside > img {
+  display: block;
+  border: 6px solid #030375;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+aside div h3 {
+  background: #030375;
+  height: 30px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+aside ul {
+  list-style-type: none;
+  padding: 0;
+}
+aside ul li {
+  margin: 8px;
+}
+aside ul li a {
+  text-decoration: none;
+  color: white;
+}
+aside ul li a:hover {
+  color: red;
+}
+
+.language img {
+  width: 50px;
+  height: 40px;
+}
+.language h5 {
+}
+
+.content {
+  padding: 40px 30px;
+  border-left: 3px solid black;
+}
+section {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+section > div {
+  margin-left: 10px;
+}
+section article ul {
+  display: none;
+}
+:target {
+  display: inline-block;
+}
+
+article img {
+  margin: auto 10px;
+  border-radius: 30%;
+  width: 40px;
+  height: 40px;
+}
+article img:hover {
+  transform: rotateY(360deg);
+  transition: 6s;
+}
+article > div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+time {
+  vertical-align: center;
+  font-weight: bold;
+  align-self: center;
+}
+
+a.experience-btn,
+a.education-btn,
+a.skills-btn {
+  position: absolute;
+  left: -120px;
+  transform: rotate(270deg);
+  height: 20px;
+  width: 200px;
+  background: none;
+  border-radius: 0 0 20px 20px;
+  border: 1px solid black;
+  border-top: none;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+}
+
+a.experience-btn:active,
+a.education-btn:active,
+a.skills-btn:active {
+  box-shadow: 0 4px 4px 0 red;
+  text-decoration: none;
+  color: blue;
+}
+a.experience-btn:focus,
+a.education-btn:focus,
+a.skills-btn:focus {
+  box-shadow: 0 4px 4px 0 green;
+}
+
+@media only screen and (max-width: 650px) {
+  aside {
+    padding: 40px 5px;
+  }
+  .content {
+    justify-content: center;
+    padding: 40px 15px;
+  }
+  a.experience-btn,
+  a.education-btn,
+  a.skills-btn {
+    left: -105px;
+  }
+}
+@media only screen and (max-width: 460px) {
+  div.wrapper {
+    display: inline;
+  }
+  .content {
+    background: white;
+    border: 0;
+    border-radius: initial;
+  }
+  aside {
+    padding: 40px 20px;
+    border-radius: initial;
+  }
+}
