@@ -20,43 +20,61 @@ aside {
   color: white;
 }
 
-aside > img {
+aside div.me > img {
   display: block;
-  border: 6px solid #030375;
+  border: 10px solid #030375;
   border-radius: 50%;
   margin: 0 auto;
 }
-aside h2 {
+
+aside div.me h2 {
   text-align: center;
 }
-aside h3 {
-  margin-left: 8px;
+
+aside div ul li p,
+aside div ul li a {
+  margin: 5px 0 5px 5px;
+}
+
+aside div.contact ul li {
+  display: flex;
+  align-items: center;
 }
 
 aside div.hobbies > i {
-  margin-left: 13%;
+  margin: 10px 0 10px 10%;
+  font-size: 25px;
 }
+
 aside div.language {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
+
 aside div.qr img {
   display: block;
-  margin: 22px auto 0 auto;
+  margin: 30px auto 0;
+  box-shadow: 0 4px 8px 0 black;
 }
+
 aside div.contact div,
 aside div.social-media div,
 aside div.hobbies div,
-aside div.qr div,
-aside div.language-title {
+aside div.language-title,
+aside div.qr div {
   display: flex;
   background: #030375;
   height: 30px;
-  margin: 8px auto;
-  padding: 10px;
+  margin: 10px auto;
+  padding: 4px 12px;
   border-radius: 20px;
   align-items: center;
+  box-shadow: 0 4px 8px 0 black;
+}
+
+aside h3 {
+  margin-left: 8px;
 }
 
 aside ul {
@@ -64,15 +82,20 @@ aside ul {
   padding: 0;
   margin: 0;
 }
+
 aside ul li {
   margin: 8px;
 }
+
 aside ul li a {
   text-decoration: none;
   color: white;
 }
+
 aside ul li a:hover {
-  color: red;
+  color: white;
+  background: #030375;
+  box-shadow: 0 4px 8px 0 black;
 }
 
 .language img {
@@ -84,17 +107,21 @@ aside ul li a:hover {
   padding: 40px 30px;
   border-left: 3px solid black;
 }
+
 section {
   position: relative;
   display: flex;
   align-items: center;
 }
+
 section > div {
   margin-left: 10px;
 }
+
 section article ul {
   display: none;
 }
+
 :target {
   display: inline-block;
 }
@@ -104,14 +131,18 @@ article img {
   border-radius: 30%;
   width: 40px;
   height: 40px;
+  box-shadow: 0 4px 8px 0 black;
 }
+
 article img:hover {
   transform: rotateY(360deg);
-  transition: 6s;
+  transition: 4s;
 }
+
 article > div {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 time {
@@ -144,42 +175,72 @@ a.skills-btn:active {
   text-decoration: none;
   color: blue;
 }
+
 a.experience-btn:focus,
 a.education-btn:focus,
 a.skills-btn:focus {
   box-shadow: 0 4px 4px 0 green;
 }
 
-@media only screen and (max-width: 650px) {
+#progressbar {
+  background-color: #f5f6e6;
+  border-radius: 13px;
+  padding: 3px;
+  box-shadow: 0 4px 8px 0 black;
+  position: absolute;
+  left: 150px;
+  width: 150px;
+  height: 20px;
+  margin-left: 15px;
+}
+
+#progressbar > div {
+  background-color: red;
+  width: 40%;
+  height: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
   aside {
     padding: 40px 5px;
   }
+
   .content {
     padding: 40px 15px;
   }
+
   a.experience-btn,
   a.education-btn,
   a.skills-btn {
     left: -105px;
   }
 }
+
 @media only screen and (max-width: 460px) {
   div.wrapper {
     display: inline;
   }
+
   .content {
     background: white;
     border: 0;
   }
+
   aside {
     padding: 40px 20px;
   }
 }
+
 @media print {
-  body {
+  a.experience-btn,
+  a.education-btn,
+  a.skills-btn {
+    display: none;
   }
-  aside {
-    background: rgb(6, 20, 221) !important;
-    color: white;
+
+  section article ul {
+    display: inline-block;
   }
 }
