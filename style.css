@@ -271,7 +271,6 @@ article.git div#progressbar div {
   a.experience-btn,
   a.education-btn,
   a.skills-btn {
-    /* left: -90px; */
   }
 }
 
@@ -300,7 +299,13 @@ article.git div#progressbar div {
     display: none;
   }
 
-  section article ul {
-    display: inline-block;
+  aside div.social-media ul li:last-child,
+  aside div.qr,
+  .content section article ul {
+    display: block;
+  }
+
+  aside div.qr {
+    margin-top: 200px;
   }
 }
