@@ -43,26 +43,20 @@ aside div.contact ul li {
   align-items: center;
 }
 
-aside div.contact ul,
-aside div.social-media ul {
-  margin-left: 15px;
+aside div.hobbies img {
+  width: 50px;
+  margin: 10px 0;
 }
 
-aside div.hobbies > i {
-  margin: 10px 0 10px 12%;
-  font-size: 25px;
+aside div.hobbies {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 aside div.language {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-}
-
-aside div.qr img {
-  display: block;
-  margin: 30px auto 0;
-  box-shadow: 0 4px 8px 0 black;
 }
 
 aside div.contact div,
@@ -75,7 +69,6 @@ aside div.qr div {
   height: 30px;
   margin: 10px auto;
   padding: 4px 12px;
-  /* border-radius: 20px; */
   align-items: center;
   box-shadow: 0 4px 8px 0 black;
 }
@@ -86,8 +79,8 @@ aside h3 {
 
 aside ul {
   list-style-type: none;
+  margin-left: 15px;
   padding: 0;
-  margin: 0;
 }
 
 aside ul li {
@@ -96,7 +89,7 @@ aside ul li {
   align-items: center;
 }
 aside ul li img {
-  width: 20px;
+  width: 25px;
 }
 
 aside ul li a {
@@ -113,6 +106,18 @@ aside ul li a:hover {
 .language img {
   width: 50px;
   height: 40px;
+}
+
+aside div.qr img {
+  display: block;
+  margin: 30px auto 0;
+  box-shadow: 0 4px 8px 0 black;
+}
+
+aside div.social-media ul li:last-child,
+aside div.qr,
+.content section article ul {
+  display: none;
 }
 
 .content {
@@ -139,10 +144,7 @@ section div div {
 section div div img {
   width: 50px;
   height: 50px;
-}
-
-section article ul {
-  display: none;
+  margin-left: 10px;
 }
 
 :target {
@@ -150,7 +152,7 @@ section article ul {
 }
 
 article img {
-  margin: 0 10px;
+  margin: 10px;
   border-radius: 30%;
   width: 40px;
   height: 40px;
@@ -170,6 +172,10 @@ article > div {
 
 article div h4 {
   margin: 15px 0;
+}
+
+section.skills article div h4 {
+  width: 85px;
 }
 
 time {
@@ -214,7 +220,7 @@ a.skills-btn:focus {
   border-radius: 13px;
   padding: 3px;
   box-shadow: 0 4px 8px 0 black;
-  position: absolute;
+
   left: 150px;
   width: 150px;
   height: 20px;
@@ -222,41 +228,68 @@ a.skills-btn:focus {
 }
 
 #progressbar > div {
-  background-color: red;
-  width: 40%;
   height: 20px;
   border-radius: 10px;
-  text-align: center;
+}
+
+article.eplan div#progressbar div {
+  background-color: rgb(221, 0, 26);
+  width: 80%;
+}
+
+article.autocad div#progressbar div {
+  background-color: rgb(127, 18, 22);
+  width: 70%;
+}
+
+article.html div#progressbar div {
+  background-color: rgb(222, 75, 37);
+  width: 60%;
+}
+
+article.css div#progressbar div {
+  background-color: rgb(41, 98, 234);
+  width: 50%;
+}
+
+article.javascript div#progressbar div {
+  background-color: rgb(233, 213, 77);
+  width: 40%;
+}
+
+article.react div#progressbar div {
+  background-color: rgb(9, 211, 247);
+  width: 30%;
+}
+
+article.git div#progressbar div {
+  background-color: rgb(233, 78, 50);
+  width: 30%;
 }
 
 @media only screen and (max-width: 768px) {
-  aside {
-    padding: 40px 5px;
-  }
-
-  .content {
-    padding: 40px 15px;
-  }
-
   a.experience-btn,
   a.education-btn,
   a.skills-btn {
-    left: -105px;
+    /* left: -90px; */
   }
 }
 
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 425px) {
   div.wrapper {
-    display: inline;
+    display: flex;
+    flex-direction: column;
+  }
+  aside {
+    width: 100%;
+  }
+  aside ul {
+    margin-left: 10%;
   }
 
   .content {
     background: white;
     border: 0;
-  }
-
-  aside {
-    padding: 40px 20px;
   }
 }
 
