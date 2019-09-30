@@ -121,7 +121,6 @@ aside div.qr,
 }
 
 .content {
-  padding: 40px 0;
   width: 70%;
   border-left: 3px solid black;
 }
@@ -130,10 +129,19 @@ section {
   position: relative;
   display: flex;
   align-items: center;
+  margin: 50px 0;
+}
+
+section article {
+  margin-top: 20px;
+}
+
+section article h3 {
+  margin: 0;
 }
 
 section > div {
-  margin: 0 40px;
+  margin: 0 8%;
 }
 
 section div div {
@@ -141,10 +149,9 @@ section div div {
   align-items: center;
 }
 
-section div div img {
+section img {
   width: 50px;
   height: 50px;
-  margin-left: 10px;
 }
 
 :target {
@@ -152,10 +159,10 @@ section div div img {
 }
 
 article img {
-  margin: 10px;
+  margin-right: 10px;
   border-radius: 30%;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   box-shadow: 0 4px 8px 0 black;
 }
 
@@ -164,9 +171,9 @@ article img:hover {
   transition: 4s;
 }
 
+section.skills article,
 article > div {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -174,14 +181,14 @@ article div h4 {
   margin: 15px 0;
 }
 
-section.skills article div h4 {
-  width: 85px;
+section.skills article h4 {
+  margin-right: 15px;
+  width: 80px;
 }
 
 time {
-  vertical-align: center;
-  font-weight: bold;
-  align-self: center;
+  display: inline-block;
+  margin: 4px 0;
 }
 
 a.experience-btn,
@@ -220,16 +227,16 @@ a.skills-btn:focus {
   border-radius: 13px;
   padding: 3px;
   box-shadow: 0 4px 8px 0 black;
-
   left: 150px;
   width: 150px;
   height: 20px;
-  margin-left: 15px;
 }
 
 #progressbar > div {
   height: 20px;
   border-radius: 10px;
+  padding-left: 10px;
+  font-style: border;
 }
 
 article.eplan div#progressbar div {
@@ -267,14 +274,23 @@ article.git div#progressbar div {
   width: 30%;
 }
 
-@media only screen and (max-width: 768px) {
-  a.experience-btn,
-  a.education-btn,
-  a.skills-btn {
+@media only screen and (max-width: 600px) {
+  aside {
+    min-width: 230px;
+  }
+  aside ul {
+    margin: 0;
+  }
+  aside ul li {
+    margin: 3px;
+  }
+
+  section.skills article {
+    flex-wrap: wrap;
   }
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 525px) {
   div.wrapper {
     display: flex;
     flex-direction: column;
