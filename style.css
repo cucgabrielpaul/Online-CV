@@ -63,6 +63,7 @@ aside div.contact div,
 aside div.social-media div,
 aside div.hobbies-title,
 aside div.language-title,
+aside div.personal-projects div,
 aside div.qr div {
   display: flex;
   background: #030375;
@@ -114,9 +115,12 @@ aside div.qr img {
   box-shadow: 0 4px 8px 0 black;
 }
 
-aside div.social-media ul li:last-child,
-aside div.qr,
-.content section article ul {
+aside div.qr {
+  display: none;
+}
+ul.edu,
+ul.exp,
+div.prog {
   display: none;
 }
 
@@ -128,7 +132,6 @@ aside div.qr,
 section {
   position: relative;
   display: flex;
-  align-items: center;
   margin: 50px 0;
 }
 
@@ -152,10 +155,6 @@ section div div {
 section img {
   width: 50px;
   height: 50px;
-}
-
-:target {
-  display: inline-block;
 }
 
 article img {
@@ -196,10 +195,11 @@ a.education-btn,
 a.skills-btn {
   position: absolute;
   left: -90px;
+  top: 100px;
   transform: rotate(270deg);
   height: 20px;
   width: 200px;
-  background: none;
+  background: hsl(54, 100%, 81%);
   border-radius: 0 0 20px 20px;
   border: 1px solid black;
   border-top: none;
@@ -211,15 +211,9 @@ a.skills-btn {
 a.experience-btn:active,
 a.education-btn:active,
 a.skills-btn:active {
-  box-shadow: 0 4px 4px 0 red;
+  box-shadow: 0 4px 4px 0 gray;
   text-decoration: none;
-  color: blue;
-}
-
-a.experience-btn:focus,
-a.education-btn:focus,
-a.skills-btn:focus {
-  box-shadow: 0 4px 4px 0 green;
+  background: none;
 }
 
 #progressbar {
