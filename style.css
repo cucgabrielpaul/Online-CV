@@ -109,18 +109,16 @@ aside ul li a:hover {
   height: 40px;
 }
 
-aside div.qr img {
+aside div.qr > img {
   display: block;
   margin: 30px auto 0;
   box-shadow: 0 4px 8px 0 black;
 }
 
-aside div.qr {
-  display: none;
-}
 ul.edu,
 ul.exp,
-div.prog {
+div.prog,
+aside div.qr {
   display: none;
 }
 
@@ -144,12 +142,7 @@ section article h3 {
 }
 
 section > div {
-  margin: 0 8%;
-}
-
-section div div {
-  display: flex;
-  align-items: center;
+  margin: 0 15px 0 35px;
 }
 
 section img {
@@ -169,7 +162,7 @@ article img:hover {
   transform: rotateY(360deg);
   transition: 4s;
 }
-
+section div div,
 section.skills article,
 article > div {
   display: flex;
@@ -194,12 +187,11 @@ a.experience-btn,
 a.education-btn,
 a.skills-btn {
   position: absolute;
-  left: -90px;
-  top: 100px;
+  left: -140px;
+  top: 200px;
   transform: rotate(270deg);
   height: 20px;
-  width: 200px;
-  background: hsl(54, 100%, 81%);
+  width: 300px;
   border-radius: 0 0 20px 20px;
   border: 1px solid black;
   border-top: none;
@@ -222,7 +214,7 @@ a.skills-btn:active {
   padding: 3px;
   box-shadow: 0 4px 8px 0 black;
   left: 150px;
-  width: 150px;
+  width: 200px;
   height: 20px;
 }
 
@@ -292,30 +284,53 @@ article.git div#progressbar div {
   aside {
     width: 100%;
   }
-  aside ul {
-    margin-left: 10%;
+  aside ul.myid {
+    margin-left: 15%;
+  }
+  aside ul.projects,
+  aside ul.social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  aside ul.social a {
+    width: 75px;
   }
 
   .content {
+    width: 100%;
     background: white;
     border: 0;
+  }
+  section > div {
   }
 }
 
 @media print {
+  div.wrapper aside,
+  div.wrapper .content {
+    padding-bottom: 60px;
+  }
   a.experience-btn,
   a.education-btn,
   a.skills-btn {
     display: none;
   }
 
-  aside div.social-media ul li:last-child,
   aside div.qr,
+  .content section article div#progressbar,
   .content section article ul {
     display: block;
   }
-
-  aside div.qr {
-    margin-top: 200px;
+  section.education {
+    margin-bottom: 0;
+  }
+  section.experience,
+  section.skills {
+    margin: 0;
+  }
+  aside div.qr,
+  article.energom {
+    margin-top: 400mm;
   }
 }
