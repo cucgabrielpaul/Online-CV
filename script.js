@@ -5,6 +5,17 @@ let skillsbtn = document.querySelector(".skills-btn");
 let educationul = document.querySelectorAll(".edu");
 let experienceul = document.querySelectorAll(".exp");
 let skillsul = document.querySelectorAll(".prog");
+educationul[0].style.display = "none";
+experienceul[0].style.display = "none";
+experienceul[1].style.display = "none";
+experienceul[2].style.display = "none";
+skillsul[0].style.display = "none";
+skillsul[1].style.display = "none";
+skillsul[2].style.display = "none";
+skillsul[3].style.display = "none";
+skillsul[4].style.display = "none";
+skillsul[5].style.display = "none";
+skillsul[6].style.display = "none";
 
 let ev = data => {
   for (i = 0; i < data.length; i++) {
