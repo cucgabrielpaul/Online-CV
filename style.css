@@ -261,6 +261,16 @@ li.css div#progressbar div {
   width: 50%;
 }
 
+li.sass div#progressbar div {
+  background-color: rgb(206, 103, 154);
+  width: 15%;
+}
+
+li.bootstrap div#progressbar div {
+  background-color: rgb(88, 35, 164);
+  width: 15%;
+}
+
 li.javascript div#progressbar div {
   background-color: rgb(240, 219, 79);
   width: 40%;
