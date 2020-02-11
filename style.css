@@ -21,7 +21,7 @@ aside {
   background: #c2ccd8;
 }
 
-aside div.me > img {
+aside div.me>img {
   display: block;
   border: 4px solid #4a515c;
   border-radius: 50%;
@@ -31,12 +31,12 @@ aside div.me > img {
 a.experience-btn,
 a.education-btn,
 a.skills-btn,
-aside div.contact > div,
-aside div.social-media > div,
+aside div.contact>div,
+aside div.social-media>div,
 aside div.hobbies-title,
 aside div.language-title,
-aside div.personal-projects > div,
-aside div.computer-skills > div,
+aside div.personal-projects>div,
+aside div.computer-skills>div,
 aside div.qr div {
   background: #4a515c;
 }
@@ -71,12 +71,12 @@ aside div.language {
   align-items: center;
 }
 
-aside div.contact > div,
-aside div.social-media > div,
+aside div.contact>div,
+aside div.social-media>div,
 aside div.hobbies-title,
 aside div.language-title,
-aside div.personal-projects > div,
-aside div.computer-skills > div,
+aside div.personal-projects>div,
+aside div.computer-skills>div,
 aside div.qr div {
   display: flex;
   height: 30px;
@@ -86,12 +86,12 @@ aside div.qr div {
   box-shadow: 0 4px 8px 0 black;
 }
 
-aside div.contact > div img,
-aside div.social-media > div img,
+aside div.contact>div img,
+aside div.social-media>div img,
 aside div.hobbies-title img,
 aside div.language-title img,
-aside div.personal-projects > div img,
-aside div.computer-skills > div img,
+aside div.personal-projects>div img,
+aside div.computer-skills>div img,
 aside div.qr div img {
   height: 28px;
 }
@@ -121,6 +121,7 @@ aside ul li a {
   text-decoration: none;
   color: black;
 }
+
 aside .myid ul li a:hover,
 aside .social-media ul li a:hover,
 aside .personal-projects ul li a:hover {
@@ -139,7 +140,7 @@ aside .computer-skills p {
   width: 180px;
 }
 
-aside div.qr > img {
+aside div.qr>img {
   display: block;
   margin: 30px auto 0;
   box-shadow: 0 4px 8px 0 black;
@@ -165,7 +166,7 @@ section article h3 {
   margin: 0;
 }
 
-section > div {
+section>div {
   margin: 0 20px 0 35px;
 }
 
@@ -186,9 +187,10 @@ article img:hover {
   transform: rotateY(360deg);
   transition: 4s;
 }
+
 section div div,
 div.computer-skills article,
-article > div {
+article>div {
   display: flex;
   align-items: center;
 }
@@ -235,7 +237,7 @@ a.skills-btn:active {
   height: 16px;
 }
 
-#progressbar > div {
+#progressbar>div {
   height: 16px;
   border-radius: 10px;
   padding-left: 4px;
@@ -295,9 +297,11 @@ li.git div#progressbar div {
   aside {
     min-width: 230px;
   }
+
   aside ul {
     margin: 0;
   }
+
   aside ul li {
     margin: 3px;
   }
@@ -312,18 +316,22 @@ li.git div#progressbar div {
     display: flex;
     flex-direction: column;
   }
+
   aside {
     width: 100%;
   }
+
   aside ul.myid {
     margin-left: 15%;
   }
+
   aside ul.projects,
   aside ul.social {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
+
   aside ul.social a {
     width: 75px;
   }
@@ -333,15 +341,16 @@ li.git div#progressbar div {
     background: white;
     border: 0;
   }
-  section > div {
-  }
+
+  section>div {}
 }
 
-@media print {
+ @media print {
   div.wrapper .content img {
     width: 40px;
     height: 40px;
   }
+
   aside div.contact img,
   aside div.social-media img,
   aside div.personal-projects img,
@@ -353,6 +362,7 @@ li.git div#progressbar div {
   .content {
     padding-bottom: 300px;
   }
+
   a.experience-btn,
   a.education-btn,
   a.skills-btn {
@@ -361,6 +371,7 @@ li.git div#progressbar div {
 
   aside div.qr {
     display: block;
+    margin-top: 200px;
   }
 
   section.experience,
@@ -374,9 +385,13 @@ li.git div#progressbar div {
     margin-top: 0;
   }
 
-  aside .computer-skills,
-  article.electrica {
-    margin-top: 400px;
+  aside .computer-skills
+   {
+    margin-top: 30px;
+  }
+
+  article.electrica{
+    margin-top: 100px;
   }
 
   section.experience,
